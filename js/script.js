@@ -27,21 +27,7 @@
         render();
     };
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-                <li class=\"unorderedList__listItem ${task.done ? " unorderedList__listItem--done\"" : "\""}>
-                    <button class="unorderedList__button js-done">${task.done ? "✅" : "☑️"}</button> 
-                    <span class=\"unorderedList__span ${task.done ? "unorderedList__span--done" : ""}\">${task.content}</span>
-                     <button class=\"unorderedList__button js-remove\">❌</button>
-                </li>
-            `;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-
+    const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -57,6 +43,24 @@
                 toggleTaskDone(index);
             });
         });
+    };
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+                <li class=\"unorderedList__listItem ${task.done ? " unorderedList__listItem--done\"" : "\""}>
+                    <button class="unorderedList__button js-done">${task.done ? "✅" : "☑️"}</button> 
+                    <span class=\"unorderedList__span ${task.done ? "unorderedList__span--done" : ""}\">${task.content}</span>
+                     <button class=\"unorderedList__button js-remove\">❌</button>
+                </li>
+            `;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+       bindEvents();
     };
 
     
