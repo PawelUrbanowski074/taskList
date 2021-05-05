@@ -17,13 +17,18 @@
         render();
     };
 
+    const clearNewTaskInput = (newTaskInput) => {
+        newTaskInput.focus();
+        newTaskInput.value = "";
+    };
+
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done; 
+        tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
     };
 
@@ -57,24 +62,24 @@
                 </li>
             `;
         }
-        
+
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
-       bindEvents();
+        bindEvents();
     };
-
-    
 
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskInput = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskInput.value.trim();
+
         if (newTaskContent === "") {
-            return;
+            newTaskInput.focus();
         }
-
-        addNewTask(newTaskContent);
-
+        else {
+            addNewTask(newTaskContent);
+            clearNewTaskInput(newTaskInput);
+        }
     };
 
     const init = () => {
