@@ -32,10 +32,10 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class=\"unorderedList__listItem ${task.done ? " unorderderList__listItem--done\"" : "\""}>
-                    <button class=\"unorderderList__button js-done\">${task.done ? "✅" : "☑️"}</button> 
-                    <span class="unorderedList__span">${task.content}</span>
-                     <button class=\"unorderderList__button js-remove\">❌</button>
+                <li class=\"unorderedList__listItem ${task.done ? " unorderedList__listItem--done\"" : "\""}>
+                    <button class="unorderedList__button js-done">${task.done ? "✅" : "☑️"}</button> 
+                    <span class=\"unorderedList__span ${task.done ? "unorderedList__span--done" : ""}\">${task.content}</span>
+                     <button class=\"unorderedList__button js-remove\">❌</button>
                 </li>
             `;
         }

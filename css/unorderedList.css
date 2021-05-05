@@ -15,15 +15,20 @@
 } 
 
 .unorderedList__listItem--done {
-    text-decoration: line-through;
+    
 }
 
-.unorderderList__button {
+.unorderedList__button {
     border-style: none;
     background-color: white;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .unorderedList__span {
     flex-grow: 1;
+}
+
+.unorderedList__span--done {
+    text-decoration: line-through;
 }
