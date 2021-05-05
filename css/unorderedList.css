@@ -9,20 +9,25 @@
     font-size: 18px;
     padding: 10px;
     margin: 0 auto;
+    border-bottom: solid 1px #ddd;
     display: flex;
     align-items: center;
     justify-content: space-between;
 } 
-
-.unorderedList__listItem--done {
-    
-}
 
 .unorderedList__button {
     border-style: none;
     background-color: white;
     font-size: 20px;
     text-decoration: none;
+}
+
+.unorderedList__button:hover {
+    font-weight: bold;    
+}
+
+.unorderedList__button:active {
+    font-weight: bold;
 }
 
 .unorderedList__span {
