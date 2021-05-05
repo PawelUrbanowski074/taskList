@@ -68,15 +68,4 @@
 .section__button:active {
     background-color: hsl(180, 100%, 35%);
 }
-/* 
-.section__unorderedList {
 
-}
-
-.section__listItem {
-
-} */
-
-.section__listItem--done {
-    text-decoration: line-through;
-}

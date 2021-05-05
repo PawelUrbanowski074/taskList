@@ -1,0 +1,26 @@
+
+.unorderedList {
+    list-style: none;
+    padding-left: 0;
+    font-size: 16px;
+    
+    
+}
+ 
+.unorderedList__listItem {
+    font-size: 18px;
+    padding: 10px;
+    /* display: flex;
+    justify-content: space-between; */
+    
+} 
+
+.unorderedList__listItem--done {
+    text-decoration: line-through;
+}
+
+.unorderderList__button {
+    border-style: none;
+    background-color: white;
+    font-size: 20px;
+}
