@@ -1,13 +1,6 @@
 {
     const tasks = [
-        {
-            content: "test 1",
-            done: false,
-        },
-        {
-            content: "test 2",
-            done: true,
-        },
+
     ];
 
     const addNewTask = (newTaskContent) => {
@@ -58,7 +51,7 @@
                 <li class="unorderedList__listItem ">
                     <button class="unorderedList__button js-done">${task.done ? "✅" : "☑️"}</button> 
                     <span class=\"unorderedList__span ${task.done ? "unorderedList__span--done" : ""}\">${task.content}</span>
-                     <button class=\"unorderedList__button js-remove\">❌</button>
+                    <button class=\"unorderedList__button js-remove\">❌</button>
                 </li>
             `;
         }
