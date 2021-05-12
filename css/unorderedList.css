@@ -15,21 +15,45 @@
 } 
 
 .unorderedList__button {
-    border-style: none;
-    background-color: white;
-    font-size: 20px;
-    text-decoration: none;
+    border: none;
+    padding: 5px 10px;
+    justify-self: center;
+    font-size: 18px;
 }
 
-.unorderedList__button:hover {
-    font-weight: bold;    
+.unorderedList__button--done {
+    background-color: #090;
+    color: #fff;
+}
+
+.unorderedList__button--done:hover {
+    background-color: #0c0; 
 }
 
 .unorderedList__button:active {
     font-weight: bold;
 }
 
+.unorderedList__buttonSpan {
+    opacity: 0;
+}
+
+.unorderedList__buttonSpan--done {
+    opacity: 1;
+}
+
+.unorderedList__button--remove {
+    background-color: #f00;
+    color: #fff;
+    font-size: 20px;
+}
+
+.unorderedList__button--remove:hover {
+    background-color: #f20;
+}
+
 .unorderedList__span {
+    padding-left: 15px;
     flex-grow: 1;
 }
 

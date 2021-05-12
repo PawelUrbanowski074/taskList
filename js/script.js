@@ -26,6 +26,8 @@
     };
 
     const bindEvents = () => {
+
+        
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -49,9 +51,12 @@
         for (const task of tasks) {
             htmlString += `
                 <li class="unorderedList__listItem ">
-                    <button class="unorderedList__button js-done">${task.done ? "✅" : "☑️"}</button> 
+                    <button class="unorderedList__button unorderedList__button--done js-done">
+                        <span class="unorderedList__buttonSpan${task.done ? "unorderedList__buttonSpan--done" : ""}\">✔</span>
+                    </button>
                     <span class=\"unorderedList__span ${task.done ? "unorderedList__span--done" : ""}\">${task.content}</span>
-                    <button class=\"unorderedList__button js-remove\">❌</button>
+                    <button class="unorderedList__button unorderedList__button--remove js-remove">🗑
+                    </button>
                 </li>
             `;
         }
