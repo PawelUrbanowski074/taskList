@@ -30,10 +30,6 @@
     background-color: #0c0; 
 }
 
-.unorderedList__button:active {
-    font-weight: bold;
-}
-
 .unorderedList__buttonSpan {
     opacity: 0;
 }

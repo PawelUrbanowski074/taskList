@@ -11,12 +11,12 @@ html {
     background-color: #eee;
 }
 
-.mainContainer {
+.main {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.mainContainer__header {
+.main__header {
     font-size: 1.2;
 }
