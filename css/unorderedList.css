@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    word-break: break-word;
 } 
 
 .unorderedList__button {
@@ -49,7 +50,7 @@
 }
 
 .unorderedList__span {
-    padding-left: 15px;
+    padding: 0px 15px;
     flex-grow: 1;
 }
 

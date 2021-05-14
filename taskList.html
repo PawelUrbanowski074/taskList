@@ -19,33 +19,29 @@
 </head>
 
 <body class="body">
-    <div class="mainContainer">
-        <header class="mainContainer__header">
+    <div class="main">
+        <header class="main__header">
             <h1>Lista zadań</h1>
         </header>
-        <form class="js-form">
-            <section class="section">
-                <fieldset class="section__fieldset">
-                    <h2 class="section__header">Dodaj nowe zadanie</h2>
-                </fieldset>
-                <fieldset class="section__fieldset">
-                    <p class="section__paragraph">
-                        <input class="section__input js-newTask" placeholder="Co jest do zrobienia?">
-                        <button class="section__button">
-                            Dodaj zadanie
-                        </button>
-                    </p>
-                </fieldset>
-            </section>
-            <section class="section">
-                <fieldset class="section__fieldset">
-                    <h2 class="section__header">Lista zadań</h2>
-                </fieldset>
-                <fieldset class="section__fieldset section__fieldset--task">
-                    <ul class="unorderedList js-tasks"></ul>
-                </fieldset>
-            </section>
-        </form>
+        <section class="section">
+            <fieldset class="section__fieldset">
+                <h2 class="section__header">Dodaj nowe zadanie</h2>
+            </fieldset>
+            <fieldset class="section__fieldset">
+                <form class="section__form js-form">
+                    <input class="section__input js-newTask" placeholder="Co jest do zrobienia?">
+                    <button class="section__button">Dodaj zadanie</button>
+                </form>
+            </fieldset>
+        </section>
+        <section class="section">
+            <fieldset class="section__fieldset">
+                <h2 class="section__header">Lista zadań</h2>
+            </fieldset>
+            <fieldset class="section__fieldset section__fieldset--task">
+                <ul class="unorderedList js-tasks"></ul>
+            </fieldset>
+        </section>
     </div>
 </body>
 
