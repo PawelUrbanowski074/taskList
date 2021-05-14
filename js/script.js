@@ -27,7 +27,7 @@
 
     const bindEvents = () => {
 
-        
+
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -52,7 +52,7 @@
             htmlString += `
                 <li class="unorderedList__listItem ">
                     <button class="unorderedList__button unorderedList__button--done js-done">
-                        <span class="unorderedList__buttonSpan${task.done ? "unorderedList__buttonSpan--done" : ""}\">✔</span>
+                        <span class="unorderedList__buttonSpan ${task.done ? "unorderedList__buttonSpan--done" : ""}\">✔</span>
                     </button>
                     <span class=\"unorderedList__span ${task.done ? "unorderedList__span--done" : ""}\">${task.content}</span>
                     <button class="unorderedList__button unorderedList__button--remove js-remove">🗑
@@ -73,11 +73,10 @@
 
         if (newTaskContent === "") {
             newTaskInput.focus();
+            return;
         }
-        else {
-            addNewTask(newTaskContent);
-            clearNewTaskInput(newTaskInput);
-        }
+        addNewTask(newTaskContent);
+        clearNewTaskInput(newTaskInput);
     };
 
     const init = () => {
