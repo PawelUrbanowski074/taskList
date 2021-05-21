@@ -13,7 +13,6 @@
             ...tasks,
             { content: newTaskContent },
         ];
-        //isEveryTaskDone();
         render();
     };
 
@@ -22,7 +21,6 @@
             ...tasks.slice(0, taskIndex),
             ...tasks.slice(taskIndex + 1),
         ];
-       // isEveryTaskDone();
         render();
     };
 
@@ -32,7 +30,6 @@
             { ...tasks[taskIndex], done: !(tasks[taskIndex].done) },
             ...tasks.slice(taskIndex + 1),
         ];
-        //isEveryTaskDone();
         render();
     };
 
