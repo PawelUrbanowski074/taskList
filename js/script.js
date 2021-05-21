@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideDoneTasks = false;
 
     const clearNewTaskInput = (newTaskInput) => {
         newTaskInput.focus();
@@ -31,8 +32,7 @@
         render();
     };
 
-    const bindEvents = () => {
-
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -40,7 +40,9 @@
                 removeTask(index);
             });
         });
+    };
 
+    const bindToggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -50,7 +52,11 @@
         });
     };
 
-    const render = () => {
+    const bindButtonsEvents = () => {
+        //najpierw sprawdz czy przycisk juz jest
+    };
+
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -60,14 +66,32 @@
                         <span class="unorderedList__buttonSpan ${task.done ? "unorderedList__buttonSpan--done" : ""}\">✔</span>
                     </button>
                     <span class=\"unorderedList__span ${task.done ? "unorderedList__span--done" : ""}\">${task.content}</span>
-                    <button class="unorderedList__button unorderedList__button--remove js-remove">🗑
-                    </button>
+                    <button class="unorderedList__button unorderedList__button--remove js-remove">🗑</button>
                 </li>
             `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
-        bindEvents();
+    };
+
+    const renderButtons = () => {
+        let buttonsHtmlString = "";
+        if (tasks.length > 0) {
+            buttonsHtmlString += `
+            <button class="section__listButton ">Ukryj ukończone</button>
+            <button class="section__listButton section__listButton--allDone ">Ukończ wszystkie</button>
+            `;
+        }
+        document.querySelector(".js-taskListButtons").innerHTML = buttonsHtmlString;
+    };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
+
+        bindRemoveEvents();
+        bindToggleDoneEvents();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
