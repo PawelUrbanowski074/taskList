@@ -110,16 +110,16 @@
     display: none;
 }
 
-.section__listButton:disabled{
-    color: springgreen;
+.section__listButton:disabled {
+    color: #ccc;
 }
 
-.section__listButton:hover {
+.section__listButton:hover:not([disabled]) {
     color: hsl(180, 100%, 35%);
     background-color: white;
 }
 
-.section__listButton:active {
+.section__listButton:active:not([disabled]) {
     color: hsl(180, 100%, 40%);
     background-color: white;
 }
