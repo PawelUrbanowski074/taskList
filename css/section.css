@@ -111,7 +111,7 @@
 }
 
 .section__listButton:disabled {
-    color: #ccc;
+    color: #bbb;
 }
 
 .section__listButton:hover:not([disabled]) {

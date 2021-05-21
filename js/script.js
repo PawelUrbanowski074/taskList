@@ -1,6 +1,6 @@
 {
     let tasks = [];
-    let hideDoneTasks = false;
+    let hideCompletedTasks = false;
     let allTaskFinished = false;
 
     const clearNewTaskInput = (newTaskInput) => {
@@ -13,6 +13,7 @@
             ...tasks,
             { content: newTaskContent },
         ];
+        //isEveryTaskDone();
         render();
     };
 
@@ -21,6 +22,7 @@
             ...tasks.slice(0, taskIndex),
             ...tasks.slice(taskIndex + 1),
         ];
+       // isEveryTaskDone();
         render();
     };
 
@@ -30,6 +32,7 @@
             { ...tasks[taskIndex], done: !(tasks[taskIndex].done) },
             ...tasks.slice(taskIndex + 1),
         ];
+        //isEveryTaskDone();
         render();
     };
 
@@ -42,6 +45,10 @@
             ];
         });
         render();
+    };
+
+    const isEveryTaskDone = () => {
+        allTaskFinished = (tasks.every(({done}) => done) ? true : false);
     };
 
     const bindRemoveEvents = () => {
@@ -65,10 +72,14 @@
     };
 
     const bindButtonsEvents = () => {
-        //najpierw sprawdz czy przycisk juz jest
         if (tasks.length > 0) {
             const hideDone = document.querySelector(".js-hideDoneButton");
             const toggleAllDone = document.querySelector(".js-toggleAllDoneButton");
+            
+            hideDone.addEventListener("click", () => {
+                hideCompletedTasks = !hideCompletedTasks;
+                render();
+            });
 
             toggleAllDone.addEventListener("click", () => {
                 allTaskFinished = true;
@@ -82,7 +93,7 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class="unorderedList__listItem ">
+                <li class="unorderedList__listItem ${task.done && hideCompletedTasks ? "unorderedList__listItem--hidden" : ""}">
                     <button class="unorderedList__button unorderedList__button--done js-done">
                         <span class="unorderedList__buttonSpan ${task.done ? "unorderedList__buttonSpan--done" : ""}\">✔</span>
                     </button>
@@ -107,6 +118,7 @@
     };
 
     const render = () => {
+        isEveryTaskDone();
         renderTasks();
         renderButtons();
 
