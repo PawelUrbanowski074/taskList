@@ -24,6 +24,7 @@
     padding: 5px 10px;
     justify-self: center;
     font-size: 18px;
+    transition: 0.3s;
 }
 
 .unorderedList__button--done {
@@ -32,7 +33,11 @@
 }
 
 .unorderedList__button--done:hover {
-    background-color: #0c0; 
+    background-color: hsl(120, 100%, 40%); 
+}
+
+.unorderedList__button--done:active {
+    background-color: hsl(120, 100%, 45%); 
 }
 
 .unorderedList__buttonSpan {
@@ -50,7 +55,11 @@
 }
 
 .unorderedList__button--remove:hover {
-    background-color: #f20;
+    background-color: hsl(0, 100%, 40%)
+}
+
+.unorderedList__button--remove:active {
+    background-color: hsl(0, 100%, 35%)
 }
 
 .unorderedList__span {
