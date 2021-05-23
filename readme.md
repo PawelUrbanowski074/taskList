@@ -22,6 +22,7 @@ A simple to-do list designed to help you complete your tasks. Thanks to it, you 
 - JavaScript with ES6+
 - BEM convention
 - Flexbox
+- Grid
 
 ### Application screenshot
-![Task List](https://raw.githubusercontent.com/palel/taskList/main/images/task-list.gif)
+![Task List](https://raw.githubusercontent.com/palel/taskList/main/images/newAnimation%20(2).gif)
