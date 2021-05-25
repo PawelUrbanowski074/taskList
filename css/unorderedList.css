@@ -1,25 +1,25 @@
 .unorderedList {
     list-style: none;
     padding-left: 0;
-    font-size: 16px;
 }
- 
+
 .unorderedList__listItem {
     font-size: 18px;
     padding: 10px;
-    margin: 0 auto;
     border-bottom: solid 1px #ddd;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     word-break: break-word;
-} 
+}
 
 .unorderedList__listItem--hidden {
     display: none;
 }
 
 .unorderedList__button {
+    color: #fff;
+    width: 30px;
+    height: 30px;
     border: none;
     padding: 5px 10px;
     justify-self: center;
@@ -29,30 +29,19 @@
 
 .unorderedList__button--done {
     background-color: #090;
-    color: #fff;
 }
 
 .unorderedList__button--done:hover {
-    background-color: hsl(120, 100%, 40%); 
+    background-color: hsl(120, 100%, 40%);
     cursor: pointer;
 }
 
 .unorderedList__button--done:active {
-    background-color: hsl(120, 100%, 45%); 
-}
-
-.unorderedList__buttonSpan {
-    opacity: 0;
-}
-
-.unorderedList__buttonSpan--done {
-    opacity: 1;
+    background-color: hsl(120, 100%, 45%);
 }
 
 .unorderedList__button--remove {
     background-color: #f00;
-    color: #fff;
-    font-size: 20px;
 }
 
 .unorderedList__button--remove:hover {
