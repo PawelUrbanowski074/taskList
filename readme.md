@@ -1,6 +1,6 @@
 # Pawel Urbanowski - Task List
 
-## Preview: [task-list demos](https://pawelurbanowski074.github.io/taskList/)
+## Preview: [task-list demos](https://pawelurbanowski074.github.io/taskList/taskList.html)
 
 ### Table of content
 1. [General](#general)
